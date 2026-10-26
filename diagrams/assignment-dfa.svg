@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1730" viewBox="0 0 2400 1730">
+<title>Assignment statements recognizer: token DFA with dead state</title>
+<desc>Six grammar states and one absorbing dead state. A complete transition table defines every transition.</desc>
+<rect width="2400" height="1730" fill="#111827"/>
+<text x="100" y="62" fill="#FF9030" font-size="21" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="start">ASSIGNMENT STATEMENTS RECOGNIZER</text>
+<text x="100" y="109" fill="#F2F4F8" font-size="62" font-family="Segoe UI,Arial,sans-serif" font-weight="700" dominant-baseline="text-before-edge" text-anchor="start">Deterministic finite automaton</text>
+<text x="100" y="194" fill="#AAB5C6" font-size="28" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">Token-based DFA  /  required datatype: int  /  includes the absorbing dead state</text>
+<polyline points="100.00,264.00 2300.00,264.00" fill="none" stroke="#344155" stroke-width="3" stroke-linejoin="round"/>
+<text x="100" y="300" fill="#FF9030" font-size="20" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="start">VALID PATH</text>
+<text x="2015" y="300" fill="#8BDAB3" font-size="24" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">Only q5 accepts</text>
+<polyline points="100.00,463.00 142.00,463.00" fill="none" stroke="#F2F4F8" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="142.00,463.00 125.64,470.50 125.64,455.50" fill="#F2F4F8"/>
+<polyline points="278.00,463.00 537.00,463.00" fill="none" stroke="#FF9030" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="537.00,463.00 520.64,470.50 520.64,455.50" fill="#FF9030"/>
+<text x="407.5" y="406" fill="#FF9030" font-size="30" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">INT</text>
+<polyline points="673.00,463.00 932.00,463.00" fill="none" stroke="#FF9030" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="932.00,463.00 915.64,470.50 915.64,455.50" fill="#FF9030"/>
+<text x="802.5" y="406" fill="#FF9030" font-size="30" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">ID</text>
+<polyline points="1068.00,463.00 1327.00,463.00" fill="none" stroke="#FF9030" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1327.00,463.00 1310.64,470.50 1310.64,455.50" fill="#FF9030"/>
+<text x="1197.5" y="406" fill="#FF9030" font-size="30" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">=</text>
+<polyline points="1463.00,463.00 1722.00,463.00" fill="none" stroke="#FF9030" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1722.00,463.00 1705.64,470.50 1705.64,455.50" fill="#FF9030"/>
+<text x="1592.5" y="406" fill="#FF9030" font-size="30" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">NUM or ID</text>
+<polyline points="1858.00,463.00 2117.00,463.00" fill="none" stroke="#FF9030" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="2117.00,463.00 2100.64,470.50 2100.64,455.50" fill="#FF9030"/>
+<text x="1987.5" y="406" fill="#FF9030" font-size="30" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">;</text>
+<circle cx="210" cy="463" r="63" fill="#111827" stroke="#FF9030" stroke-width="4"/>
+<text x="210" y="436" fill="#FF9030" font-size="40" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">q0</text>
+<text x="210" y="346" fill="#AAB5C6" font-size="20" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">START</text>
+<circle cx="605" cy="463" r="63" fill="#111827" stroke="#FF9030" stroke-width="4"/>
+<text x="605" y="436" fill="#FF9030" font-size="40" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">q1</text>
+<text x="605" y="346" fill="#AAB5C6" font-size="20" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">DATATYPE READ</text>
+<circle cx="1000" cy="463" r="63" fill="#111827" stroke="#FF9030" stroke-width="4"/>
+<text x="1000" y="436" fill="#FF9030" font-size="40" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">q2</text>
+<text x="1000" y="346" fill="#AAB5C6" font-size="20" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">IDENTIFIER READ</text>
+<circle cx="1395" cy="463" r="63" fill="#111827" stroke="#FF9030" stroke-width="4"/>
+<text x="1395" y="436" fill="#FF9030" font-size="40" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">q3</text>
+<text x="1395" y="346" fill="#AAB5C6" font-size="20" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">EXPECT OPERAND</text>
+<circle cx="1790" cy="463" r="63" fill="#111827" stroke="#FF9030" stroke-width="4"/>
+<text x="1790" y="436" fill="#FF9030" font-size="40" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">q4</text>
+<text x="1790" y="346" fill="#AAB5C6" font-size="20" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">OPERAND READ</text>
+<circle cx="2185" cy="463" r="63" fill="#111827" stroke="#8BDAB3" stroke-width="4"/>
+<circle cx="2185" cy="463" r="53" fill="none" stroke="#8BDAB3" stroke-width="3"/>
+<text x="2185" y="436" fill="#8BDAB3" font-size="40" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">q5</text>
+<text x="2185" y="346" fill="#AAB5C6" font-size="20" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">ACCEPT</text>
+<polyline points="1790.00,530.00 1789.88,535.88 1789.53,541.64 1788.95,547.29 1788.15,552.81 1787.14,558.21 1785.90,563.50 1784.46,568.67 1782.82,573.72 1780.98,578.65 1778.94,583.46 1776.71,588.15 1774.30,592.73 1771.71,597.18 1768.94,601.52 1766.00,605.74 1762.90,609.83 1759.63,613.81 1756.21,617.67 1752.64,621.42 1748.92,625.04 1745.06,628.54 1741.06,631.93 1736.93,635.20 1732.66,638.35 1728.28,641.38 1723.78,644.29 1719.16,647.08 1714.44,649.75 1709.61,652.30 1704.68,654.74 1699.66,657.06 1694.54,659.25 1689.34,661.33 1684.06,663.29 1678.71,665.13 1673.28,666.86 1667.79,668.46 1662.23,669.95 1656.62,671.31 1650.96,672.56 1645.25,673.69 1639.50,674.70 1633.70,675.59 1627.88,676.36 1622.03,677.02 1616.15,677.55 1610.25,677.97 1604.34,678.26 1598.42,678.44 1592.50,678.50 1586.58,678.44 1580.66,678.26 1574.75,677.97 1568.85,677.55 1562.97,677.01 1557.12,676.36 1551.30,675.59 1545.50,674.70 1539.75,673.69 1534.04,672.56 1528.38,671.31 1522.77,669.95 1517.21,668.46 1511.72,666.86 1506.29,665.13 1500.94,663.29 1495.66,661.33 1490.46,659.25 1485.34,657.06 1480.32,654.74 1475.39,652.30 1470.56,649.75 1465.84,647.08 1461.22,644.29 1456.72,641.38 1452.34,638.35 1448.07,635.20 1443.94,631.93 1439.94,628.54 1436.08,625.04 1432.36,621.42 1428.79,617.67 1425.37,613.81 1422.10,609.83 1419.00,605.74 1416.06,601.52 1413.29,597.18 1410.70,592.73 1408.29,588.15 1406.06,583.46 1404.02,578.65 1402.18,573.72 1400.54,568.67 1399.10,563.50 1397.86,558.22 1396.85,552.81 1396.05,547.29 1395.47,541.64 1395.12,535.88 1395.00,530.00" fill="none" stroke="#FF9030" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1395.00,530.00 1402.83,546.21 1387.83,546.51" fill="#FF9030"/>
+<text x="1592" y="707" fill="#FF9030" font-size="29" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">OP: +  -  *  /</text>
+<text x="1592" y="751" fill="#AAB5C6" font-size="21" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">Repeat for additional operands</text>
+<rect x="100" y="825" width="2200" height="190" rx="20" fill="#231F2B" stroke="#694251" stroke-width="2"/>
+<text x="133" y="851" fill="#FF9292" font-size="20" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="start">DEAD STATE / DEADLOCK</text>
+<text x="133" y="891" fill="#F2F4F8" font-size="31" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">Every unlisted transition from any state goes to qD.</text>
+<text x="133" y="941" fill="#AAB5C6" font-size="24" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">Invalid characters also enter qD. Once there, all remaining input stays there.</text>
+<polyline points="1450.00,918.00 1772.00,918.00" fill="none" stroke="#FF9292" stroke-width="4" stroke-linejoin="round" stroke-dasharray="10 8"/>
+<polygon points="1772.00,918.00 1755.64,925.50 1755.64,910.50" fill="#FF9292"/>
+<text x="1608" y="867" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">otherwise</text>
+<circle cx="1843" cy="918" r="63" fill="#111827" stroke="#FF9292" stroke-width="4"/>
+<text x="1843" y="891" fill="#FF9292" font-size="40" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<polyline points="1891.00,878.00 1896.55,874.44 1902.00,871.15 1907.33,868.12 1912.54,865.34 1917.65,862.81 1922.64,860.52 1927.52,858.46 1932.29,856.64 1936.95,855.05 1941.49,853.67 1945.92,852.51 1950.24,851.57 1954.45,850.82 1958.54,850.28 1962.53,849.93 1966.40,849.77 1970.16,849.79 1973.80,849.99 1977.34,850.36 1980.76,850.90 1984.07,851.61 1987.27,852.46 1990.35,853.47 1993.33,854.63 1996.19,855.92 1998.94,857.35 2001.57,858.91 2004.10,860.59 2006.51,862.40 2008.81,864.31 2011.00,866.33 2013.07,868.46 2015.04,870.68 2016.89,873.00 2018.63,875.40 2020.25,877.88 2021.77,880.44 2023.17,883.07 2024.46,885.76 2025.64,888.51 2026.71,891.32 2027.66,894.17 2028.50,897.07 2029.23,900.01 2029.85,902.98 2030.35,905.97 2030.75,908.99 2031.03,912.03 2031.19,915.07 2031.25,918.12 2031.19,921.18 2031.03,924.22 2030.75,927.26 2030.35,930.28 2029.85,933.28 2029.23,936.25 2028.50,939.19 2027.66,942.10 2026.71,944.96 2025.64,947.77 2024.46,950.53 2023.17,953.23 2021.77,955.86 2020.25,958.43 2018.63,960.92 2016.89,963.33 2015.04,965.65 2013.07,967.89 2011.00,970.02 2008.81,972.06 2006.51,973.99 2004.10,975.80 2001.57,977.50 1998.94,979.07 1996.19,980.52 1993.33,981.83 1990.35,983.00 1987.27,984.02 1984.07,984.90 1980.76,985.62 1977.34,986.17 1973.80,986.57 1970.16,986.79 1966.40,986.83 1962.53,986.69 1958.54,986.36 1954.45,985.84 1950.24,985.12 1945.92,984.19 1941.49,983.06 1936.95,981.71 1932.29,980.14 1927.52,978.34 1922.64,976.32 1917.65,974.05 1912.54,971.55 1907.33,968.79 1902.00,965.79 1896.55,962.53 1891.00,959.00" fill="none" stroke="#FF9292" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1891.00,959.00 1908.83,961.44 1900.79,974.10" fill="#FF9292"/>
+<text x="2115" y="875" fill="#FF9292" font-size="23" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">ANY TOKEN</text>
+<text x="2115" y="912" fill="#AAB5C6" font-size="21" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">self-loop</text>
+<text x="100" y="1064" fill="#FF9030" font-size="21" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="start">COMPLETE TRANSITION TABLE</text>
+<text x="100" y="1103" fill="#AAB5C6" font-size="23" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">All transitions are defined. OTHER includes invalid characters.</text>
+<rect x="100" y="1156" width="1360" height="422" rx="14" fill="#172131" stroke="#344155" stroke-width="2"/>
+<text x="195.5" y="1171" fill="#AAB5C6" font-size="23" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">STATE</text>
+<text x="374.5" y="1171" fill="#AAB5C6" font-size="23" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">INT</text>
+<text x="541.5" y="1171" fill="#AAB5C6" font-size="23" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">ID</text>
+<text x="708.5" y="1171" fill="#AAB5C6" font-size="23" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">NUM</text>
+<text x="875.5" y="1171" fill="#AAB5C6" font-size="23" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">=</text>
+<text x="1042.5" y="1171" fill="#AAB5C6" font-size="23" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">OP</text>
+<text x="1209.5" y="1171" fill="#AAB5C6" font-size="23" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">;</text>
+<text x="1376.5" y="1171" fill="#AAB5C6" font-size="23" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">OTHER</text>
+<polyline points="100.00,1210.00 1460.00,1210.00" fill="none" stroke="#344155" stroke-width="3" stroke-linejoin="round"/>
+<text x="195.5" y="1220" fill="#F2F4F8" font-size="25" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">q0</text>
+<text x="374.5" y="1220" fill="#FF9030" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">q1</text>
+<text x="541.5" y="1220" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="708.5" y="1220" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="875.5" y="1220" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1042.5" y="1220" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1209.5" y="1220" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1376.5" y="1220" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="195.5" y="1270" fill="#F2F4F8" font-size="25" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">q1</text>
+<text x="374.5" y="1270" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="541.5" y="1270" fill="#FF9030" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">q2</text>
+<text x="708.5" y="1270" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="875.5" y="1270" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1042.5" y="1270" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1209.5" y="1270" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1376.5" y="1270" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="195.5" y="1320" fill="#F2F4F8" font-size="25" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">q2</text>
+<text x="374.5" y="1320" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="541.5" y="1320" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="708.5" y="1320" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="875.5" y="1320" fill="#FF9030" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">q3</text>
+<text x="1042.5" y="1320" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1209.5" y="1320" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1376.5" y="1320" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="195.5" y="1370" fill="#F2F4F8" font-size="25" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">q3</text>
+<text x="374.5" y="1370" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="541.5" y="1370" fill="#FF9030" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">q4</text>
+<text x="708.5" y="1370" fill="#FF9030" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">q4</text>
+<text x="875.5" y="1370" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1042.5" y="1370" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1209.5" y="1370" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1376.5" y="1370" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="195.5" y="1420" fill="#F2F4F8" font-size="25" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">q4</text>
+<text x="374.5" y="1420" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="541.5" y="1420" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="708.5" y="1420" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="875.5" y="1420" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1042.5" y="1420" fill="#FF9030" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">q3</text>
+<text x="1209.5" y="1420" fill="#FF9030" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">q5</text>
+<text x="1376.5" y="1420" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="195.5" y="1470" fill="#8BDAB3" font-size="25" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">q5 *</text>
+<text x="374.5" y="1470" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="541.5" y="1470" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="708.5" y="1470" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="875.5" y="1470" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1042.5" y="1470" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1209.5" y="1470" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1376.5" y="1470" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="195.5" y="1520" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="374.5" y="1520" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="541.5" y="1520" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="708.5" y="1520" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="875.5" y="1520" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1042.5" y="1520" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1209.5" y="1520" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="1376.5" y="1520" fill="#FF9292" font-size="25" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="middle">qD</text>
+<text x="100" y="1596" fill="#AAB5C6" font-size="23" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">* Accept only when input ends in q5. Ending in any other state rejects.</text>
+<text x="1520" y="1064" fill="#FF9030" font-size="21" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="start">TOKEN LEGEND</text>
+<text x="1520" y="1123" fill="#FF9030" font-size="23" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="start">INT</text>
+<text x="1668" y="1123" fill="#F2F4F8" font-size="23" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">The exact keyword &quot;int&quot;</text>
+<text x="1520" y="1190" fill="#FF9030" font-size="23" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="start">ID</text>
+<text x="1668" y="1190" fill="#F2F4F8" font-size="23" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">L(L | D)*, except the keyword int</text>
+<text x="1520" y="1257" fill="#FF9030" font-size="23" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="start">NUM</text>
+<text x="1668" y="1257" fill="#F2F4F8" font-size="23" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">D+  (one or more digits)</text>
+<text x="1520" y="1324" fill="#FF9030" font-size="23" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="start">L / D</text>
+<text x="1668" y="1324" fill="#F2F4F8" font-size="23" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">L = a-z or A-Z; D = 0-9</text>
+<text x="1520" y="1391" fill="#FF9030" font-size="23" font-family="Consolas,monospace" font-weight="700" dominant-baseline="text-before-edge" text-anchor="start">OP</text>
+<text x="1668" y="1391" fill="#F2F4F8" font-size="23" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">One of +, -, *, /</text>
+<text x="1520" y="1480" fill="#AAB5C6" font-size="24" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">Lexer skips spaces, tabs, and line breaks</text>
+<text x="1520" y="1518" fill="#AAB5C6" font-size="24" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">between tokens. It never splits a name</text>
+<text x="1520" y="1556" fill="#AAB5C6" font-size="24" font-family="Segoe UI,Arial,sans-serif" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">or number; tokens use maximal matching.</text>
+<polyline points="100.00,1650.00 2300.00,1650.00" fill="none" stroke="#344155" stroke-width="3" stroke-linejoin="round"/>
+<text x="100" y="1670" fill="#F2F4F8" font-size="24" font-family="Consolas,monospace" font-weight="400" dominant-baseline="text-before-edge" text-anchor="start">GRAMMAR   int identifier = operand (operator operand)* ;</text>
+</svg>

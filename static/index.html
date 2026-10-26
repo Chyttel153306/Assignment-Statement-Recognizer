@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="A local assignment statement recognizer. Check integer declarations against a clear, simple grammar.">
+  <title>Assignment Statements Recognizer</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <main>
+      <section class="intro">
+        <div class="eyebrow"><span class="short-line"></span> A LITTLE SYNTAX. A LOT OF CLARITY.</div>
+        <h1>ASSIGNMENT STATEMENTS<br><span>RECOGNIZER</span></h1>
+        <p>Write a statement. Check the grammar. See exactly what works.</p>
+      </section>
+
+      <section class="workspace" aria-label="Assignment checker">
+        <div class="editor-panel panel">
+          <div class="panel-heading"><h2><span class="section-number">01</span> Statement editor</h2><span class="small-tag">INTEGER ASSIGNMENT</span></div>
+          <div class="editor-body">
+            <div class="editor-label"><label for="statement">YOUR STATEMENT</label><span id="char-count">0 / 4096</span></div>
+            <div class="code-editor"><div class="line-numbers" id="line-numbers" aria-hidden="true">1</div><textarea id="statement" maxlength="4096" rows="5" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="int sum = 1 + 1;" aria-describedby="editor-hint"></textarea></div>
+            <div class="editor-hint" id="editor-hint"><span class="hint-icon">i</span> Begin with <code>int</code> and finish with <code>;</code><span class="keyboard-hint"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> to check</span></div>
+            <div class="editor-actions"><button id="check-button" class="primary-button" type="button">Check statement <span aria-hidden="true">↗</span></button><button id="clear-button" class="text-button" type="button">Clear editor</button></div>
+          </div>
+          <div class="examples"><div class="examples-heading">NEED A STARTING POINT?<span>Click an example to try it</span></div><div class="example-list"><button class="example" data-source="int sum = 1 + 1;"><span class="example-dot good"></span><code>int sum = 1 + 1;</code><span aria-hidden="true">↗</span></button><button class="example" data-source="int sum = 11 + 11 + 12 + 22;"><span class="example-dot good"></span><code>int sum = 11 + 11 + 12 + 22;</code><span aria-hidden="true">↗</span></button><button class="example" data-source="sum = 1 + 1;"><span class="example-dot bad"></span><code>sum = 1 + 1;</code><span aria-hidden="true">↗</span></button></div></div>
+        </div>
+
+        <aside class="result-panel panel" aria-label="Validation results">
+          <div class="panel-heading"><h2><span class="section-number">02</span> Analysis</h2><span id="result-badge" class="result-badge">READY</span></div>
+          <div class="result-content" id="result-content" aria-live="polite" aria-atomic="true">
+            <div class="result-icon idle" id="result-icon" aria-hidden="true">⌁</div>
+            <h3 id="result-title">Ready when you are.</h3>
+            <p id="result-description">Enter an assignment and check it.<br>We’ll take it one token at a time.</p>
+            <p id="result-location" class="result-location" hidden></p>
+          </div>
+          <div class="checks-section"><div class="subheading">GRAMMAR CHECKLIST <span id="check-count">0 / 5</span></div><ol class="check-list" id="check-list"><li data-check="datatype"><span class="check-symbol">·</span>Starts with the datatype <code>int</code></li><li data-check="identifier"><span class="check-symbol">·</span>Identifier starts with a letter</li><li data-check="assignment"><span class="check-symbol">·</span>Exactly one assignment operator</li><li data-check="expression"><span class="check-symbol">·</span>Operands and operators alternate</li><li data-check="semicolon"><span class="check-symbol">·</span>Ends with a single semicolon</li></ol></div>
+        </aside>
+      </section>
+
+      <section class="token-panel panel" id="token-panel" hidden aria-label="Recognized tokens"><div class="panel-heading"><h2><span class="section-number">↳</span> Token breakdown</h2><span id="token-count" class="small-tag"></span></div><div id="tokens" class="tokens"></div></section>
+
+      <section class="reference" aria-labelledby="reference-title"><div class="reference-heading"><div><span class="eyebrow">THE LANGUAGE, AT A GLANCE</span><h2 id="reference-title">Small alphabet. Clear rules.</h2></div><span class="reference-note">Syntax recognition only. Expressions are not evaluated.</span></div>
+        <div class="alphabet-grid"><div class="alphabet-item"><span>DATATYPE</span><code class="orange">int</code><p>Required at the start</p></div><div class="alphabet-item"><span>LETTERS</span><code>a–z &nbsp; A–Z</code><p>Start every identifier</p></div><div class="alphabet-item"><span>DIGITS</span><code>0–9</code><p>Integers and name suffixes</p></div><div class="alphabet-item"><span>ASSIGNMENT</span><code>=</code><p>Exactly one per statement</p></div><div class="alphabet-item"><span>ARITHMETIC</span><code>+ &nbsp; − &nbsp; * &nbsp; /</code><p>Between two operands</p></div><div class="alphabet-item"><span>TERMINATOR</span><code class="orange">;</code><p>Always at the end</p></div></div>
+        <details class="rules"><summary>Read the validation rules <span aria-hidden="true">+</span></summary><ol><li>Begin with the datatype <code>int</code>, then an identifier and <code>=</code>.</li><li>Identifiers begin with an ASCII letter and may contain ASCII letters and digits. The keyword <code>int</code> is reserved.</li><li>The right side contains an integer or identifier, optionally followed by more operands separated by <code>+</code>, <code>-</code>, <code>*</code>, or <code>/</code>.</li><li>Each arithmetic operator must have an operand on both sides. Unary signs, decimals, and parentheses are not allowed.</li><li>End with one semicolon. Only one statement and one assignment operator are allowed.</li><li>Spaces, tabs, and line breaks may separate tokens; they cannot split an identifier or number.</li><li>Missing operands, underscores, and characters outside the defined alphabet are invalid.</li></ol><div class="grammar"><span>GRAMMAR</span><code>int identifier = operand (operator operand)* ;</code></div></details>
+      </section>
+    </main>
+    <footer><span class="footer-mark" aria-hidden="true">{ ; }</span><span>Built for statements that make sense.</span><span class="footer-right">LOCAL BY DESIGN <span class="status-dot"></span></span></footer>
+  </div>
+</body>
+</html>
